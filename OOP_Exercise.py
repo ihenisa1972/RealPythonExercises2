@@ -1,3 +1,4 @@
+# Parent Base class
 class Animal:
     def __init__(self, sound, legs, fur_type):
         self.sound = sound
