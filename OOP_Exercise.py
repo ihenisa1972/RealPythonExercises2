@@ -16,6 +16,7 @@ class Animal:
     def number_of_legs(self):
         print(f"The animal of type {self.type} has {self.legs} legs")
 
+# Child class derived from Animal Base Class
 class Horse(Animal):
 
     def __init__(self, sound, legs, fur_type):
@@ -24,6 +25,7 @@ class Horse(Animal):
         self.fur_type= fur_type
         self.type = "horse"
 
+# Child class derived from Animal Base Class
 class Pig(Animal):
     def __init__(self, sound, legs, fur_type):
         self.sound = sound
@@ -31,6 +33,7 @@ class Pig(Animal):
         self.fur_type= fur_type
         self.type = "pig"
 
+# Child class derived from Animal Base Class
 class Roster(Animal):
     def __init__(self, sound, legs, fur_type):
         self.sound = sound
