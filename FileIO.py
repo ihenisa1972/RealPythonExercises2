@@ -63,11 +63,24 @@ file_handle.write("\nHello World")
 
 path = "C:/Users/ihenisa/Downloads/TestData"
 
+"""
 for file_name in os.listdir(path):
     if file_name.lower().endswith(".docx"):
         full_path = os.path.join(path, file_name)
         new_path = full_path[:-5] + ".backup_docx"
         full_path = os.rename(full_path, new_path)
+"""
+
+files_and_folders = os.listdir(path)
+
+for folder_name in files_and_folders:
+    full_path = os.path.join(path, folder_name)
+    if os.path.isdir(full_path):
+        os.rename(full_path, full_path + " folder")
+
+
+
+
 
 
 
