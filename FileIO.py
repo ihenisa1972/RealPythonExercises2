@@ -1,3 +1,5 @@
+import os
+
 # Readlines() example
 """input_file = open("hello.txt", "w")
 
@@ -54,8 +56,21 @@ with open("poem.txt", "r") as file_handle, open("output.txt", "w") as output_han
         output_handle.write(line)
 """
 
+"""
 file_handle = open("output.txt", "a")
 file_handle.write("\nHello World")
+"""
+
+path = "C:/Users/ihenisa/Downloads/TestData"
+
+for file_name in os.listdir(path):
+    if file_name.lower().endswith(".docx"):
+        full_path = os.path.join(path, file_name)
+        new_path = full_path[:-5] + ".backup_docx"
+        full_path = os.rename(full_path, new_path)
+
+
+
 
 
 
