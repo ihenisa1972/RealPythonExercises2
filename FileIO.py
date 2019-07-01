@@ -71,18 +71,17 @@ for file_name in os.listdir(path):
         full_path = os.rename(full_path, new_path)
 """
 
+"""
 files_and_folders = os.listdir(path)
 
 for folder_name in files_and_folders:
     full_path = os.path.join(path, folder_name)
     if os.path.isdir(full_path):
         os.rename(full_path, full_path + " folder")
-
-
-
-
-
-
+"""
+for current_folder, subfolders, file_names in os.walk(path):
+    for file_name in file_names:
+        print(os.path.join(current_folder, file_name))
 
 
 
